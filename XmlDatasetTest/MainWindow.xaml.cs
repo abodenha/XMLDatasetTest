@@ -33,6 +33,7 @@ namespace XmlDatasetTest
             journal_data = ((XmlDatasetTest.journal_data)(this.FindResource("journal_data")));
         }
 
+        // Hello. I love you.
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog
