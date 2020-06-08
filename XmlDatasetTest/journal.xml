@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<journal_data xmlns="http://tempuri.org/DataSet1.xsd">
+  <xs:schema id="journal_data" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="journal_data" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="entries">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="Date" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Entry" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="entriesKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:entries" />
+        <xs:field xpath="mstns:ID" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <entries>
+    <ID>0</ID>
+    <Entry>Go to the store.</Entry>
+  </entries>
+  <entries>
+    <ID>1</ID>
+    <Entry>Eat a dinosaur</Entry>
+  </entries>
+  <entries>
+    <ID>2</ID>
+    <Entry>Pick my nose.</Entry>
+  </entries>
+</journal_data>

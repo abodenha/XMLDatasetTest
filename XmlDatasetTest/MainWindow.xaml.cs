@@ -35,10 +35,12 @@ namespace XmlDatasetTest
 
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
-            dlg.FileName = "journal"; // Default file name
-            dlg.DefaultExt = ".xml"; // Default file extension
-            dlg.Filter = "Text documents (.xml)|*.xml"; // Filter files by extension
+            Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog
+            {
+                FileName = "journal", // Default file name
+                DefaultExt = ".xml", // Default file extension
+                Filter = "Text documents (.xml)|*.xml" // Filter files by extension
+            };
 
             // Show save file dialog box
             Nullable<bool> result = dlg.ShowDialog();
@@ -53,9 +55,11 @@ namespace XmlDatasetTest
 
         private void load_button_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.DefaultExt = ".xml"; // Default file extension
-            dlg.Filter = "Text documents (.xml)|*.xml"; // Filter files by extension
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog
+            {
+                DefaultExt = ".xml", // Default file extension
+                Filter = "Text documents (.xml)|*.xml" // Filter files by extension
+            };
 
             // Show save file dialog box
             Nullable<bool> result = dlg.ShowDialog();
